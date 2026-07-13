@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Fueling Creativity in Education — Subscribe</title>
-<meta name="description" content="Subscribe to the Fueling Creativity in Education podcast on Apple Podcasts or Spotify.">
+<title>Fueling Creativity in Education</title>
+<meta name="description" content="Get the book, The Future Creative, and subscribe to the Fueling Creativity in Education podcast on Apple Podcasts or Spotify.">
 <meta name="theme-color" content="#2b1c10">
 <style>
   :root{
@@ -21,28 +21,67 @@
   body{
     margin:0;
     min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     padding:24px;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     background:radial-gradient(circle at 50% 0%, var(--bg-top), var(--bg-bottom) 70%);
     color:var(--text-main);
   }
-  .card{
+  .wrap{
     width:100%;
     max-width:420px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .card{
     background:var(--card-bg);
     border-radius:28px;
-    padding:36px 28px 32px;
+    padding:32px 28px;
     box-shadow:0 30px 60px -20px rgba(0,0,0,.5);
     text-align:center;
   }
+  .page-header{
+    text-align:center;
+    padding:4px 12px 4px;
+    color:#fff;
+  }
+  .page-header .eyebrow{ color:var(--accent); }
+  .page-header h1{
+    font-size:1.55rem;
+    line-height:1.25;
+    margin:0 0 8px;
+    font-weight:800;
+    letter-spacing:-.01em;
+  }
+  .page-header p{
+    margin:0;
+    color:#e6d5c4;
+    font-size:.98rem;
+    line-height:1.45;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:14px;
+  }
+  .book-cover{
+    width:132px;
+    margin:0 auto 18px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 14px 28px -10px rgba(43,28,16,.45);
+  }
+  .book-cover img{ width:100%; display:block; }
   .cover{
-    width:160px;
-    height:160px;
-    margin:0 auto 20px;
-    border-radius:24px;
+    width:120px;
+    height:120px;
+    margin:0 auto 18px;
+    border-radius:20px;
     overflow:hidden;
     box-shadow:0 14px 28px -10px rgba(43,28,16,.45);
   }
@@ -61,17 +100,23 @@
     white-space:nowrap;
     border:0;
   }
+  h2{
+    font-size:1.25rem;
+    line-height:1.25;
+    margin:0 0 4px;
+    font-weight:800;
+    letter-spacing:-.01em;
+  }
   p.tagline{
-    margin:0 0 28px;
+    margin:0 0 22px;
     color:var(--text-muted);
-    font-size:.98rem;
+    font-size:.95rem;
     line-height:1.4;
   }
   .buttons{
     display:flex;
     flex-direction:column;
     gap:14px;
-    margin-bottom:22px;
   }
   .btn{
     display:flex;
@@ -87,6 +132,15 @@
     border:1px solid transparent;
   }
   .btn:active{ transform:scale(.97); }
+  .btn-amazon{
+    background:#000;
+    color:#fff;
+  }
+  .btn-prufrock{
+    background:var(--accent);
+    color:#fff;
+  }
+  .btn-prufrock .icon svg{ width:100%; height:100%; }
   .btn-apple{
     background:#2b1c10;
     color:#fff;
@@ -105,6 +159,11 @@
     mask-position:center;
     -webkit-mask-size:contain;
     mask-size:contain;
+  }
+  .btn-amazon .icon{
+    background-color:#f3801e;
+    -webkit-mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/amazon.svg');
+    mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/amazon.svg');
   }
   .btn-apple .icon{
     background-color:#fff;
@@ -125,68 +184,106 @@
     text-transform:uppercase;
     letter-spacing:.04em;
   }
+  .footer{
+    text-align:center;
+    padding:4px 12px 0;
+  }
   .divider{
     display:flex;
     align-items:center;
     gap:10px;
-    color:var(--text-muted);
+    color:#cbb7a4;
     font-size:.8rem;
-    margin:22px 0 18px;
+    margin:0 0 18px;
   }
   .divider::before, .divider::after{
     content:"";
     flex:1;
     height:1px;
-    background:#ecdfd2;
+    background:rgba(255,255,255,.25);
   }
   .site-link{
     display:inline-flex;
     align-items:center;
     gap:8px;
-    color:var(--text-main);
+    color:#fff;
     text-decoration:none;
     font-weight:700;
     font-size:1rem;
     padding:10px 18px;
     border-radius:12px;
-    border:1.5px solid #ecdfd2;
+    border:1.5px solid rgba(255,255,255,.35);
   }
-  .site-link:active{ background:#faf4ee; }
+  .site-link:active{ background:rgba(255,255,255,.1); }
   .hosts{
-    margin-top:22px;
-    color:var(--text-muted);
+    margin-top:18px;
+    color:#cbb7a4;
     font-size:.82rem;
     line-height:1.5;
   }
 </style>
 </head>
 <body>
-  <div class="card">
-    <div class="cover">
-      <img src="cover-art.png" alt="Fueling Creativity in Education: Bridging the Gap — with Dr. Matthew Worwood and Dr. Cyndi Burnett">
+  <div class="wrap">
+
+    <div class="page-header">
+      <span class="eyebrow">Fueling Creativity in Education</span>
+      <h1>Thanks for joining us today!</h1>
+      <p>Grab the book, subscribe to the podcast, and keep the conversation going.</p>
     </div>
 
-    <h1 class="sr-only">Fueling Creativity in Education — Subscribe</h1>
-    <p class="tagline">Thanks for joining us! Subscribe now so you never miss an episode.</p>
-
-    <div class="buttons">
-      <a class="btn btn-apple" href="https://podcasts.apple.com/us/podcast/fueling-creativity-in-education/id1561020163" target="_blank" rel="noopener">
-        <span class="icon" aria-hidden="true"></span>
-        <span class="btn-label"><small>Listen on</small>Apple Podcasts</span>
-      </a>
-      <a class="btn btn-spotify" href="https://open.spotify.com/show/7b8fknEEI242RotQeKG1aA" target="_blank" rel="noopener">
-        <span class="icon" aria-hidden="true"></span>
-        <span class="btn-label"><small>Listen on</small>Spotify</span>
-      </a>
+    <div class="card">
+      <span class="eyebrow">The Book</span>
+      <div class="book-cover">
+        <img src="book-cover.png" alt="The Future Creative: 10 Actions for Fueling Creativity in Education, book cover">
+      </div>
+      <h2>The Future Creative</h2>
+      <p class="tagline">10 Actions for Fueling Creativity in Education</p>
+      <div class="buttons">
+        <a class="btn btn-amazon" href="https://www.amazon.com/Future-Creative-Transformational-Creativity-Education/dp/1041122357" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true"></span>
+          <span class="btn-label"><small>Buy on</small>Amazon</span>
+        </a>
+        <a class="btn btn-prufrock" href="https://www.routledge.com/The-Future-Creative-10-Actions-for-Fueling-Creativity-in-Education/Worwood-Burnett/p/book/9781041122357" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="7" cy="7" r="3" stroke="#fff" stroke-width="2"/>
+              <circle cx="17" cy="17" r="3" stroke="#fff" stroke-width="2"/>
+              <line x1="5" y1="19" x2="19" y2="5" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="btn-label"><small>20% off · direct from</small>Prufrock Press</span>
+        </a>
+      </div>
     </div>
 
-    <div class="divider">or visit the website</div>
+    <div class="card">
+      <span class="eyebrow">The Podcast</span>
+      <div class="cover">
+        <img src="cover-art.png" alt="Fueling Creativity in Education: Bridging the Gap — with Dr. Matthew Worwood and Dr. Cyndi Burnett">
+      </div>
+      <h2>Subscribe Now</h2>
+      <p class="tagline">Bridging the Science of Creativity with the Art of Teaching.</p>
+      <div class="buttons">
+        <a class="btn btn-apple" href="https://podcasts.apple.com/us/podcast/fueling-creativity-in-education/id1561020163" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true"></span>
+          <span class="btn-label"><small>Listen on</small>Apple Podcasts</span>
+        </a>
+        <a class="btn btn-spotify" href="https://open.spotify.com/show/7b8fknEEI242RotQeKG1aA" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true"></span>
+          <span class="btn-label"><small>Listen on</small>Spotify</span>
+        </a>
+      </div>
+    </div>
 
-    <a class="site-link" href="https://fuelingcreativitypodcast.com" target="_blank" rel="noopener">
-      FuelingCreativityPodcast.com
-    </a>
+    <div class="footer">
+      <div class="divider">or visit the website</div>
+      <a class="site-link" href="https://fuelingcreativitypodcast.com" target="_blank" rel="noopener">
+        FuelingCreativityPodcast.com
+      </a>
+      <p class="hosts">© 2026 Dr. Matthew Worwood &amp; Dr. Cyndi Burnett</p>
+    </div>
 
-    <p class="hosts">Hosted by Dr. Matthew Worwood &amp; Dr. Cyndi Burnett</p>
   </div>
 </body>
 </html>

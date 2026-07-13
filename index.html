@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fueling Creativity in Education — Subscribe</title>
+<meta name="description" content="Subscribe to the Fueling Creativity in Education podcast on Apple Podcasts or Spotify.">
+<meta name="theme-color" content="#2b1c10">
+<style>
+  :root{
+    --bg-top:#4a2f18;
+    --bg-bottom:#1a1108;
+    --card-bg:#ffffff;
+    --text-main:#2b1c10;
+    --text-muted:#7a6a5c;
+    --spotify-green:#1DB954;
+    --accent:#f3801e;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(circle at 50% 0%, var(--bg-top), var(--bg-bottom) 70%);
+    color:var(--text-main);
+  }
+  .card{
+    width:100%;
+    max-width:420px;
+    background:var(--card-bg);
+    border-radius:28px;
+    padding:36px 28px 32px;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,.5);
+    text-align:center;
+  }
+  .cover{
+    width:160px;
+    height:160px;
+    margin:0 auto 20px;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 14px 28px -10px rgba(43,28,16,.45);
+  }
+  .cover img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .sr-only{
+    position:absolute;
+    width:1px;height:1px;
+    padding:0;margin:-1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+    border:0;
+  }
+  p.tagline{
+    margin:0 0 28px;
+    color:var(--text-muted);
+    font-size:.98rem;
+    line-height:1.4;
+  }
+  .buttons{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-bottom:22px;
+  }
+  .btn{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    width:100%;
+    padding:14px 18px;
+    border-radius:16px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:1.02rem;
+    transition:transform .15s ease, box-shadow .15s ease;
+    border:1px solid transparent;
+  }
+  .btn:active{ transform:scale(.97); }
+  .btn-apple{
+    background:#2b1c10;
+    color:#fff;
+  }
+  .btn-spotify{
+    background:var(--spotify-green);
+    color:#062e14;
+  }
+  .btn .icon{
+    width:28px;
+    height:28px;
+    flex:none;
+    -webkit-mask-repeat:no-repeat;
+    mask-repeat:no-repeat;
+    -webkit-mask-position:center;
+    mask-position:center;
+    -webkit-mask-size:contain;
+    mask-size:contain;
+  }
+  .btn-apple .icon{
+    background-color:#fff;
+    -webkit-mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/applepodcasts.svg');
+    mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/applepodcasts.svg');
+  }
+  .btn-spotify .icon{
+    background-color:#062e14;
+    -webkit-mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/spotify.svg');
+    mask-image:url('https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/spotify.svg');
+  }
+  .btn-label{ flex:1; text-align:left; }
+  .btn-label small{
+    display:block;
+    font-weight:500;
+    font-size:.72rem;
+    opacity:.7;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+  }
+  .divider{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--text-muted);
+    font-size:.8rem;
+    margin:22px 0 18px;
+  }
+  .divider::before, .divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:#ecdfd2;
+  }
+  .site-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--text-main);
+    text-decoration:none;
+    font-weight:700;
+    font-size:1rem;
+    padding:10px 18px;
+    border-radius:12px;
+    border:1.5px solid #ecdfd2;
+  }
+  .site-link:active{ background:#faf4ee; }
+  .hosts{
+    margin-top:22px;
+    color:var(--text-muted);
+    font-size:.82rem;
+    line-height:1.5;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="cover">
+      <img src="cover-art.png" alt="Fueling Creativity in Education: Bridging the Gap — with Dr. Matthew Worwood and Dr. Cyndi Burnett">
+    </div>
+
+    <h1 class="sr-only">Fueling Creativity in Education — Subscribe</h1>
+    <p class="tagline">Thanks for joining us! Subscribe now so you never miss an episode.</p>
+
+    <div class="buttons">
+      <a class="btn btn-apple" href="https://podcasts.apple.com/us/podcast/fueling-creativity-in-education/id1561020163" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"></span>
+        <span class="btn-label"><small>Listen on</small>Apple Podcasts</span>
+      </a>
+      <a class="btn btn-spotify" href="https://open.spotify.com/show/7b8fknEEI242RotQeKG1aA" target="_blank" rel="noopener">
+        <span class="icon" aria-hidden="true"></span>
+        <span class="btn-label"><small>Listen on</small>Spotify</span>
+      </a>
+    </div>
+
+    <div class="divider">or visit the website</div>
+
+    <a class="site-link" href="https://fuelingcreativitypodcast.com" target="_blank" rel="noopener">
+      FuelingCreativityPodcast.com
+    </a>
+
+    <p class="hosts">Hosted by Dr. Matthew Worwood &amp; Dr. Cyndi Burnett</p>
+  </div>
+</body>
+</html>
